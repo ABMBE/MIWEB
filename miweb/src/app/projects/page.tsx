@@ -30,7 +30,7 @@ const Projects: React.FC = () => {
                             y documentación exhaustiva. El resultado fue una infraestructura de red mejorada que optimizó la conectividad y la seguridad de la empresa, 
                             fortaleciendo mis habilidades técnicas y de gestión de proyectos." photo="images/equipos.jpeg"></Card>
                         </div>
-                        <div>
+                        <div className={styles.card3}>
                             <Card name="Portafolio Virtual" description="Desarrollé esta página web utilizando Next.js y Node.js, enfocándome 
                             en la creación de una interfaz de usuario dinámica y eficiente. Implementé la estructura del sitio en Next.js para aprovechar su capacidad 
                             de renderizado del lado del servidor y mejorar el rendimiento. Node.js me permitió manejar las operaciones del servidor y la 

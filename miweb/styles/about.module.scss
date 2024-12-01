@@ -6,17 +6,27 @@
         @include flex (column);
         align-items: center;
         min-height: 100vh;
-        padding: 50px;
-        gap: 90px;
+        padding-top: 100px;
+        gap: 100px;
 
     h1 {
         font-size: $font-size-h1;
+    }
+
+    h2 {
+        font-size: $font-size-h2;
+        text-align: center;
+    }
+    h3{
+        font-size: $font-card-h3;
+        text-decoration: dotted;
+        text-align: center;
     }
     
     p {
         font-size: $font-size-p;
         padding-left: 200px;
         padding-right: 200px;
-        text-align: justify;
+        text-align: center;
     }
 }

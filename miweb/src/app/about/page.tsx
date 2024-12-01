@@ -12,7 +12,9 @@ const About: React.FC = () => {
             <div>
                 <div className={styles.about}>
                     <h1>SOBRE MI</h1>
-                    <p>Estudiante de Ingeniería de Sistemas cursando el primer año de mi carrera, 
+                    <h3>Aqui encontraras mas informacion acerca de mi,<br></br> que hago y las habilidades que tengo en tecnologia.</h3>
+                    <h2>CONÓCEME</h2>
+                    <p>Soy estudiante de Ingeniería de Sistemas cursando el primer año de mi carrera, 
                         me interesa mucho la tecnología y el uso tan productivo que esta puede tener 
                         en nuestro día a día, me gusta mucho el mundo de la programación y de la Ciberseguridad.
                         Soy egresado de la carrera de Administración de Redes y Comunicaciones de Datos, 
