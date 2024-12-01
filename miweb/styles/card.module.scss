@@ -1,0 +1,12 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.profileCard {
+    @include flex (column);
+//    border-radius: 25%;
+    border: 4px solid rgb(34, 0, 255);
+    align-items: center;
+
+
+
+}

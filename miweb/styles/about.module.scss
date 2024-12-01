@@ -1,0 +1,22 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+.about {
+
+        @include flex (column);
+        align-items: center;
+        min-height: 100vh;
+        padding: 50px;
+        gap: 90px;
+
+    h1 {
+        font-size: $font-size-h1;
+    }
+    
+    p {
+        font-size: $font-size-p;
+        padding-left: 200px;
+        padding-right: 200px;
+        text-align: justify;
+    }
+}

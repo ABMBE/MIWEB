@@ -1,0 +1,23 @@
+@import "../styles/variables.scss";
+@import "../styles/mixins.scss";
+
+.main {
+    height: auto;
+}
+.body {
+    @include flex (column);
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+
+    div h1 {
+        font-size: $font-size-h1;
+    }
+        h2{
+            font-size: $font-size-h2;
+        }
+        p{
+            font-size: $font-size-p;
+        }
+
+}

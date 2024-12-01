@@ -1,0 +1,6 @@
+@import "../styles/variables.scss";
+
+@mixin flex ($direction){
+    display: flex;
+    flex-direction: $direction; 
+}
