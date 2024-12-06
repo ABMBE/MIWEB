@@ -2,47 +2,61 @@
 @import "../styles/mixins.scss";
 
 
+.page {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+    justify-items: center;
+    transform: translateX(-100);
+    animation: slideInFromLeft 1s forwards;
+
+
 .h1 {
     font-size: $font-size-h1;
     text-align: center;
+    color: $fontcolor1;
+    padding-top: 30px;
 }
 
 .projects {
     display: grid; 
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr); 
-    padding: 50px;
-    min-height: 100vh;
+    padding: 80px;
+//    grid-template-columns: repeat(3, 1fr);
+//    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: auto auto auto ;
+//    padding: 50px;
+    min-height: 100dvh;
     gap:20px;
 
     .card1 {
-            grid-row: 1;
+        //    grid-row: 1;
             opacity: 0;
             transform: translateX(-100%);
             animation: slideInFromLeft 1s forwards;
         }
     .card2{
-        grid-row: 2;
-        grid-column: 2;
+        //grid-row: 2;
+        //grid-column: 2;
         transform: translateY(100%);
         animation: slideInFromBottom 1s forwards;
 
     }
     .card3{
-        grid-column: 3;
+        //grid-column: 3;
         transform: translateX(100%);
         animation: slideInFromRight 1s forwards;
 
     }
         .card1, .card2, .card3 {
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            border: 1px solid #ddd;
+//            flex-direction: column;
+//            align-items:flex-end ;
+            border: 2px solid $fontcolor1;
             padding: 20px;
-            border-radius: 15px; /* Bordes redondeados */
+            border-radius: 15px; 
             box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-            background-color: #fff;
+//           background-color: rgb(16, 12, 12);
             min-height: 400px;
             overflow: hidden; /* Asegura que las imágenes no se desborden */
             transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
@@ -54,7 +68,7 @@
         
     }
     }
-    
+}    
     @keyframes slideInFromLeft { 
         from { opacity: 0; 
             transform: 
@@ -84,6 +98,16 @@
         to  {
             opacity: 1;
             transform: translateY(0);
+        }
+    }
+    @keyframes slideInFromLeft {
+        from {
+            opacity: 0;
+            transform: translateX(-100%);
+        }
+        to  {
+            opacity: 1;
+            transform: translateX(0);
         }
     }
 

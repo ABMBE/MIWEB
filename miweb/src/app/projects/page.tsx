@@ -6,8 +6,7 @@ import Card from '../../../components/card';
 
 const Projects: React.FC = () => {
     return (
-        <div>
-            <div>
+        <div className={styles.page}>
                 <header>
                     <Header></Header>
                 </header>
@@ -43,7 +42,6 @@ const Projects: React.FC = () => {
                 <footer>
                     <Footer></Footer>
                 </footer>
-        </div>
     </div>
     );
 };

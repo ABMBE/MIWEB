@@ -2,31 +2,42 @@
 @import "../styles/variables.scss";
 
 .about {
-
-        @include flex (column);
+//        @include flex (column);
+        display: grid;
+        min-height: 100dvh;
+        grid-template-rows: auto 1fr auto;
         align-items: center;
-        min-height: 100vh;
-        padding-top: 100px;
-        gap: 100px;
-
-    h1 {
-        font-size: $font-size-h1;
+        justify-items: center;
+        transform: translateY(-100);
+        animation: slideInFromLeft 1s forwards;
+        text-align: justify;
+        
+        
+        .main {
+            @include flex (column);
+            flex-wrap: wrap;
+            width: 50%;
+            align-items: center;
+            gap: 150px;
+            border-bottom-style:ridge;
+            h1 {
+                font-size: $font-size-h1;
+                color: $fontcolor1;
+            }
+            p   {
+            font-size: $font-size-p;
+            
+            }
+        }
     }
-
-    h2 {
-        font-size: $font-size-h2;
-        text-align: center;
-    }
-    h3{
-        font-size: $font-card-h3;
-        text-decoration: dotted;
-        text-align: center;
-    }
+        @keyframes slideInFromLeft {
+            from {
+                opacity: 0;
+                transform: translateY(-100%);
+            }
+            to  {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     
-    p {
-        font-size: $font-size-p;
-        padding-left: 200px;
-        padding-right: 200px;
-        text-align: center;
-    }
-}
