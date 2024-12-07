@@ -1,0 +1,85 @@
+@import "../styles/mixins.scss";
+@import "../styles/variables.scss";
+
+
+
+.body {
+    @include grid-layout;
+    transform: translateX(-100);
+    animation: slideInFromLeft 1s forwards;
+
+    .main {
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Divide la segunda fila en dos columnas iguales */
+        gap: 20px; /* Espacio entre las columnas */
+        padding: 20px;
+
+        .form-container {
+        background-color: rgb(40, 39, 44);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        padding: 20px;
+        /* Asegura que el formulario esté en la izquierda */
+        order: 1;
+        }
+
+        .info-container {
+        border-radius: 10px;
+        padding: 20px;
+        /* Asegura que la información esté en la derecha */
+        order: 2;
+        p {
+            font-size: 1.1rem; /* Ajusta el tamaño de fuente */
+            display: flex;
+            align-items: center;
+
+            i {
+            margin-right: 10px;
+            font-size: 1.5rem; /* Ajusta el tamaño del icono */
+            }
+        }
+        }
+
+        h2 {
+        text-align: center;
+        margin-bottom: 20px;
+        font-size: $font-size-h1;
+        color: $fontcolor1;
+        }
+
+        .form-label {
+        font-weight: bold;
+        }
+
+        .form-control {
+        height: 50px; /* Ajusta la altura de los inputs */
+        font-size: 16px; /* Ajusta el tamaño del texto */
+        }
+
+        textarea.form-control {
+        height: 150px; /* Ajusta la altura del textarea */
+        }
+
+        .btn-primary {
+        background-color: $fontcolor1;
+        border: none;
+        transition: background-color 0.3s ease;
+        padding: 10px 20px; /* Ajusta el padding del botón */
+
+        &:hover {
+            background-color: $fontcolor2;
+        }
+        }
+    }
+    }
+
+    @keyframes slideInFromLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

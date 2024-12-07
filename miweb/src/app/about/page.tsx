@@ -14,7 +14,7 @@ const About: React.FC = () => {
                     <h1>SOBRE MI</h1>
                     <p>Soy estudiante de Ingeniería de Sistemas cursando el primer año de mi carrera, 
                         me interesa mucho la tecnología y el uso tan productivo que esta puede tener 
-                        en nuestro día a día, mSe gusta mucho el mundo de la programación y de la Ciberseguridad.
+                        en nuestro día a día, me gusta mucho el mundo de la programación y de la Ciberseguridad.
                         Soy egresado de la carrera de Administración de Redes y Comunicaciones de Datos, 
                         cuento con experiencia en diseñar, implementar y mantener infraestructuras de red. 
                         Mi enfoque se centra en la seguridad, la optimización del rendimiento y la resolución de problemas.</p>

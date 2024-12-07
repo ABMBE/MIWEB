@@ -4,3 +4,24 @@
     display: flex;
     flex-direction: $direction; 
 }
+
+@mixin grid-layout {
+    display: grid;
+    min-height: 100dvh;
+    grid-template-rows: auto 1fr auto;
+    align-items: center;
+    justify-items: center;
+}
+
+//@mixin movilhead {
+//    @media (max-width: 600px) {
+//        @include flex(column);
+//        background-color: red;
+//        font-size: 20px;
+//    }
+//}
+@mixin for-phone-only { 
+    @media (max-width: 600px) { 
+        @content
+    }
+}

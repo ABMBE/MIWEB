@@ -11,32 +11,50 @@
     grid-template-rows: auto 1fr auto;
     transform: translateX(-100);
     animation: slideInFromLeft 1s forwards;
+    @include for-phone-only {
+        text-align: center;
+    }
 
 
     div h1 {
         font-size: $font-size-h1;
         color: $fontcolor1;
+        @include for-phone-only {
+            font-size: $fonth1mov;
+            padding-bottom: 15px;
+        }
         }
         h2{
             font-size: $font-size-h2;
+            @include for-phone-only {
+                font-size: $fonth2mov;
+                padding: 20px;
+            }
             }
         p{
             font-size: $font-size-p;
+            @include for-phone-only {
+                font-size: $fontpmov;
+                padding: 10px;
+            }
             }
             .button {
                 display: inline-block;
                 padding: 10px 20px;
                 margin-top: 20px;
                 border: 1px solid $fontcolor1;
-//                background-color: $fontcolor1;
                 color: $fontcolor1;
                 text-decoration: none;
                 border-radius: 5px;
                 transition: background-color 0.3s ease;
+                @include for-phone-only {
+                    padding: 5px 5px;
+                }
             
                 &:hover {
                     background-color: $fontcolor2;
                 }
+        
             }
     }
 @keyframes slideInFromLeft {

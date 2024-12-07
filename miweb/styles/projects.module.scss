@@ -3,11 +3,12 @@
 
 
 .page {
-    display: grid;
-    min-height: 100dvh;
-    grid-template-rows: auto 1fr auto;
-    align-items: center;
-    justify-items: center;
+//    display: grid;
+//    min-height: 100dvh;
+//    grid-template-rows: auto 1fr auto;
+//    align-items: center;
+//    justify-items: center;
+    @include grid-layout;
     transform: translateX(-100);
     animation: slideInFromLeft 1s forwards;
 

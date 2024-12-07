@@ -1,0 +1,22 @@
+@import "../styles/variables.scss";
+
+.cursor {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 15px; /* Ajusta el tamaño */
+    height: 15px; /* Ajusta el tamaño */
+    background-color:$fontcolor1 ; /* Color cian con transparencia */
+    border: 2px solid $fontcolor2; /* Borde cian con transparencia */
+    border-radius: 50%; /* Forma redonda */
+    pointer-events: none; /* Para que no interfiera con los clics */
+    z-index: 9999; /* Asegura que esté siempre arriba */
+    mix-blend-mode: difference; /* Para un efecto visual interesante */
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5), 0 0 20px rgba(0, 255, 255, 0.3); /* Sombra luminosa */
+    transition: transform 0.1s ease, width 0.1s ease, height 0.1s ease;
+    &:hover {
+      transform: scale(1.5); /* Aumenta el tamaño al pasar sobre elementos */
+      width: 20px; /* Aumenta el tamaño del ancho */
+      height: 20px; /* Aumenta el tamaño de la altura */
+    }
+}

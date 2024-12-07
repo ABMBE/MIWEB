@@ -3,11 +3,12 @@
 
 .about {
 //        @include flex (column);
-        display: grid;
-        min-height: 100dvh;
-        grid-template-rows: auto 1fr auto;
-        align-items: center;
-        justify-items: center;
+//        display: grid;
+//        min-height: 100dvh;
+//        grid-template-rows: auto 1fr auto;
+//        align-items: center;
+//        justify-items: center;
+        @include grid-layout;
         transform: translateY(-100);
         animation: slideInFromLeft 1s forwards;
         text-align: justify;
@@ -19,13 +20,24 @@
             width: 50%;
             align-items: center;
             gap: 150px;
-            border-bottom-style:ridge;
+            @include for-phone-only {
+                gap: 60px;
+                width: 70%;
+            }
+            
             h1 {
                 font-size: $font-size-h1;
                 color: $fontcolor1;
+                @include for-phone-only {
+                    font-size: $fonth1mov;
+                }
             }
             p   {
             font-size: $font-size-p;
+            @include for-phone-only {
+                font-size: $fontpmov;
+                text-align: center;
+            }
             
             }
         }
@@ -40,4 +52,3 @@
                 transform: translateY(0);
             }
         }
-    
