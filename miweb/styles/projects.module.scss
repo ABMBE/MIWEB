@@ -11,6 +11,7 @@
     @include grid-layout;
     transform: translateX(-100);
     animation: slideInFromLeft 1s forwards;
+    }
 
 
 .h1 {
@@ -18,6 +19,9 @@
     text-align: center;
     color: $fontcolor1;
     padding-top: 30px;
+    @include for-phone-only {
+        font-size: $fonth1mov;
+    } 
 }
 
 .projects {
@@ -29,6 +33,11 @@
 //    padding: 50px;
     min-height: 100dvh;
     gap:20px;
+    @include for-phone-only {
+        grid-template-columns: auto;
+        padding: 3%;
+
+    }
 
     .card1 {
         //    grid-row: 1;
@@ -56,20 +65,19 @@
             border: 2px solid $fontcolor1;
             padding: 20px;
             border-radius: 15px; 
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); 
 //           background-color: rgb(16, 12, 12);
             min-height: 400px;
-            overflow: hidden; /* Asegura que las imágenes no se desborden */
-            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
+            overflow: hidden; 
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
         
             &:hover {
-              transform: translateY(-10px); /* Elevación al pasar el cursor */
-              box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada al pasar el cursor */
+                transform: translateY(-10px); 
+                box-shadow: 0 12px 20px rgba(0, 0, 0, 0.2); 
             }
-        
+        }
     }
-    }
-}    
+    
     @keyframes slideInFromLeft { 
         from { opacity: 0; 
             transform: 

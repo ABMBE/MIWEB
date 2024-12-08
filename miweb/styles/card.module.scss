@@ -11,12 +11,20 @@
     text-align: center;
     font-size: $font-card-h1;
     padding: 35px;
+    @include for-phone-only {
+        padding: 4%;
+    }
     
 }
 
 .description {
     font-size: $font-card-h3;
     padding: 50px;
+    @include for-phone-only {
+        padding: 5%;
+        font-size: $fontpmov;
+        text-align: center;
+    }
 }
 
 .photo {
@@ -33,6 +41,9 @@
     }
     &:hover img {
         transform: scale(1.1);
+    }
+    @include for-phone-only {
+        border-radius: 80px;
     }
 }
 

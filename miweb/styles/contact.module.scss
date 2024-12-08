@@ -2,7 +2,6 @@
 @import "../styles/variables.scss";
 
 
-
 .body {
     @include grid-layout;
     transform: translateX(-100);
@@ -10,33 +9,64 @@
 
     .main {
         display: grid;
-        grid-template-columns: 1fr 1fr; /* Divide la segunda fila en dos columnas iguales */
-        gap: 20px; /* Espacio entre las columnas */
+        grid-template-columns: 1fr 1fr; 
+        gap: 20px; 
         padding: 20px;
+        @include for-phone-only {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto auto;
+
+            .form-container, .info-container {
+                order: unset;
+                padding: 15px;
+            }
+            
+        }
 
         .form-container {
         background-color: rgb(40, 39, 44);
         box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
         border-radius: 10px;
         padding: 20px;
-        /* Asegura que el formulario esté en la izquierda */
         order: 1;
+
+        .form-control { 
+            border: 1px solid #ccc; 
+            border-radius: 5px; padding: 10px; 
+            background-color: #e80000;  
+            color: #f40000; 
+            
+            &:focus { 
+                border-color: #2b0000; 
+                background-color: #e0e0e0; 
+                color: #000;  } }
         }
 
         .info-container {
         border-radius: 10px;
         padding: 20px;
-        /* Asegura que la información esté en la derecha */
+        
         order: 2;
+
+        .iconColor {
+            color: $fontcolor1; 
+        }
+        
         p {
-            font-size: 1.1rem; /* Ajusta el tamaño de fuente */
+            font-size: 2rem; 
+            padding: 20px;
             display: flex;
             align-items: center;
+            @include for-phone-only {
+                font-size: $fontpmov;
+            }
 
             i {
             margin-right: 10px;
-            font-size: 1.5rem; /* Ajusta el tamaño del icono */
+            font-size: 2rem; ;
+            padding-right: 15px;
             }
+
         }
         }
 
@@ -45,6 +75,10 @@
         margin-bottom: 20px;
         font-size: $font-size-h1;
         color: $fontcolor1;
+        @include for-phone-only {
+            text-align: start;
+            font-size: $fonth1mov;
+        }
         }
 
         .form-label {
@@ -52,19 +86,19 @@
         }
 
         .form-control {
-        height: 50px; /* Ajusta la altura de los inputs */
-        font-size: 16px; /* Ajusta el tamaño del texto */
+        height: 50px; 
+        font-size: 16px; 
         }
 
         textarea.form-control {
-        height: 150px; /* Ajusta la altura del textarea */
+        height: 150px; 
         }
 
         .btn-primary {
         background-color: $fontcolor1;
         border: none;
         transition: background-color 0.3s ease;
-        padding: 10px 20px; /* Ajusta el padding del botón */
+        padding: 10px 20px; 
 
         &:hover {
             background-color: $fontcolor2;
@@ -72,6 +106,8 @@
         }
     }
     }
+
+
 
     @keyframes slideInFromLeft {
     from {
